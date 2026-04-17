@@ -1,0 +1,122 @@
+﻿  commands.cpp
+  fileio.cpp
+  helpers.cpp
+  logic.cpp
+  main.cpp
+  packets.cpp
+E:\Downloads\Plugins\common\Utilities.h(24,23): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'helpers.cpp')
+  
+E:\Downloads\Plugins\common\Utilities.h(24,23): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'commands.cpp')
+  
+E:\Downloads\Plugins\common\Output.h(52,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'helpers.cpp')
+  
+E:\Downloads\Plugins\common\Output.h(52,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'commands.cpp')
+  
+E:\Downloads\Plugins\common\Utilities.h(24,23): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'fileio.cpp')
+  
+E:\Downloads\Plugins\common\Output.h(52,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'fileio.cpp')
+  
+E:\Downloads\Plugins\common\Utilities.h(24,23): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'packets.cpp')
+  
+E:\Downloads\Plugins\common\Utilities.h(24,23): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'main.cpp')
+  
+E:\Downloads\Plugins\common\Output.h(52,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'packets.cpp')
+  
+E:\Downloads\Plugins\common\Output.h(52,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'main.cpp')
+  
+E:\Downloads\Plugins\common\Utilities.h(24,23): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'logic.cpp')
+  
+E:\Downloads\Plugins\common\Output.h(52,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'logic.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(235,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'helpers.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(258,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'helpers.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(309,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'helpers.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(235,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'fileio.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(258,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'fileio.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(235,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'commands.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(258,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'commands.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(309,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'fileio.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(309,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'commands.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(235,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'main.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(258,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'main.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(235,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'packets.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(258,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'packets.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(309,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'main.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(309,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'packets.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(235,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'logic.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(258,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'logic.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(309,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'logic.cpp')
+  
+E:\Downloads\Plugins\Lootwhore\helpers.cpp(52,23): warning C4018: '<': signed/unsigned mismatch
+E:\Downloads\Plugins\Lootwhore\helpers.cpp(80,27): warning C4244: '=': conversion from 'uint16_t' to 'uint8_t', possible loss of data
+E:\Downloads\Plugins\Lootwhore\helpers.cpp(103,36): warning C4244: '=': conversion from 'uint16_t' to 'uint8_t', possible loss of data
+E:\Downloads\Plugins\Lootwhore\helpers.cpp(121,30): warning C4244: '=': conversion from 'uint16_t' to 'uint8_t', possible loss of data
+E:\Downloads\Plugins\Lootwhore\helpers.cpp(122,35): warning C4244: '=': conversion from 'uint16_t' to 'uint8_t', possible loss of data
+     Creating library Release\Lootwhore.lib and object Release\Lootwhore.exp
+  Generating code
+  Previous IPDB not found, fall back to full compilation.
+  All 1372 functions were compiled because no usable IPDB/IOBJ from previous compilation was found.
+  Finished generating code
+  Lootwhore.vcxproj -> E:\Downloads\Plugins\Lootwhore\Release\Lootwhore.dll
+          1 file(s) copied.
+  E:\Downloads\Plugins\Lootwhore\build\docs\lootwhore\configxmlstructure.htm
+  E:\Downloads\Plugins\Lootwhore\build\docs\lootwhore\profilexmlstructure.htm
+  E:\Downloads\Plugins\Lootwhore\build\docs\lootwhore\readme.htm
+  E:\Downloads\Plugins\Lootwhore\build\plugins\Lootwhore.dll
+  4 File(s) copied
+  The system cannot find the path specified.
+C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: The command "if not exist "build" mkdir "build"
+C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: if not exist "build\plugins" mkdir "build\plugins"
+C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: if exist "build\Lootwhore.zip" del "build\Lootwhore.zip"
+C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: copy "Release\Lootwhore.dll" "E:\Downloads\Plugins\Lootwhore\build\plugins\Lootwhore.dll"
+C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: xcopy "E:\Downloads\Plugins\Lootwhore\build\*" "C:\Ashita 4\" /i /e /Y
+C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: cd build
+C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: "C:\Program Files\7-Zip\7z.exe" a Lootwhore.zip * -x!*.zip
+C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: :VCEnd" exited with code 3.

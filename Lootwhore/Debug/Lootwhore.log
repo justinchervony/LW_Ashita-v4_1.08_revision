@@ -1,0 +1,24 @@
+﻿  logic.cpp
+E:\Downloads\Plugins\sdk\ErrorHandling.h(156,34): warning C4535: calling _set_se_translator() requires /EHa
+  (compiling source file 'logic.cpp')
+  
+E:\Downloads\Plugins\common\Utilities.h(24,23): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'logic.cpp')
+  
+E:\Downloads\Plugins\common\Output.h(52,27): warning C4018: '<': signed/unsigned mismatch
+  (compiling source file 'logic.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(235,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'logic.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(258,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'logic.cpp')
+  
+E:\Downloads\Plugins\common\Settings.h(309,20): warning C4244: 'initializing': conversion from 'std::streamoff' to 'long', possible loss of data
+  (compiling source file 'logic.cpp')
+  
+  Lootwhore.vcxproj -> E:\Downloads\Plugins\Lootwhore\Debug\Lootwhore_debug.dll
+  The system cannot find the path specified.
+          0 file(s) copied.
+C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: The command "copy "Debug\Lootwhore_debug.dll" "C:\Ashita 4\plugins\Lootwhore_debug.dll"
+C:\Program Files\Microsoft Visual Studio\18\Community\MSBuild\Microsoft\VC\v180\Microsoft.CppCommon.targets(166,5): error MSB3073: :VCEnd" exited with code 1.
