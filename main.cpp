@@ -158,6 +158,16 @@ void Lootwhore::InitializeCommands()
     build.help.command     = "/lw help [Optional: command]";
     build.help.description = "Print information on a command.  If no command is specified, a list of commands will be printed.";
     mCommandMap.insert(std::make_pair("help", build));
+
+    build.handler          = &Lootwhore::HandleCommandAutoStack;
+    build.help.command     = "/lw autostack [Required: on/off]";
+    build.help.description = "Toggles automatic merging of partial stacks in inventory.";
+    mCommandMap.insert(std::make_pair("autostack", build));
+
+    build.handler          = &Lootwhore::HandleCommandSearch;
+    build.help.command     = "/lw search [Required: partial item name]";
+    build.help.description = "Searches item database by name and returns matching IDs. Returns up to 10 results.";
+    mCommandMap.insert(std::make_pair("search", build));
 }
 
 void Lootwhore::InitializeState()

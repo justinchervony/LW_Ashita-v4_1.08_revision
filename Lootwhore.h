@@ -94,6 +94,7 @@ public:
     void HandleCommandLot(std::vector<string> args, int argcount, CommandHelp help);
     void HandleCommandPass(std::vector<string> args, int argcount, CommandHelp help);
     void HandleCommandHelp(std::vector<string> args, int argcount, CommandHelp help);
+    void HandleCommandSearch(std::vector<string> args, int argcount, CommandHelp help);
     void PrintHelpText(CommandHelp help, bool description);
 
     //fileio.cpp

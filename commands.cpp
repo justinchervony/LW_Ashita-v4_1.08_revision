@@ -1,4 +1,5 @@
 #include "Lootwhore.h"
+#include <algorithm>
 
 bool Lootwhore::HandleCommand(int32_t mode, const char* command, bool injected)
 {
@@ -10,6 +11,12 @@ bool Lootwhore::HandleCommand(int32_t mode, const char* command, bool injected)
 
     if (CheckArg(0, "/lw") || CheckArg(0, "/lootwhore"))
     {
+        if (argcount < 2)
+        {
+            HandleCommandHelp(args, argcount, mCommandMap["help"].help);
+            return true;
+        }
+
         auto iter = mCommandMap.find(args[1]);
         if (iter == mCommandMap.end())
         {
@@ -476,6 +483,56 @@ void Lootwhore::HandleCommandHelp(std::vector<string> args, int argcount, Comman
         PrintHelpText(iter->second.help, false);
     }
 }
+
+void Lootwhore::HandleCommandSearch(std::vector<string> args, int argcount, CommandHelp help)
+{
+    if (argcount < 3)
+    {
+        PrintHelpText(help, true);
+        return;
+    }
+
+    std::string searchTerm = "";
+    for (int i = 2; i < argcount; i++)
+    {
+        if (i > 2)
+            searchTerm += " ";
+        searchTerm += args[i];
+    }
+    int resultCount        = 0;
+    int maxResults         = 10;
+
+    pOutput->message_f("Search results for '$H%s$R':", searchTerm.c_str());
+
+    for (uint16_t id = 1; id < 65535; id++)
+    {
+        IItem* item = m_AshitaCore->GetResourceManager()->GetItemById(id);
+        if (!item || !item->Name[0] || strlen(item->Name[0]) < 1)
+            continue;
+
+        std::string itemName(item->Name[0]);
+        // Strip quotes from item name for comparison
+        itemName.erase(std::remove(itemName.begin(), itemName.end(), '"'), itemName.end());
+
+        std::string search(searchTerm);
+        std::transform(itemName.begin(), itemName.end(), itemName.begin(), ::tolower);
+        std::transform(search.begin(), search.end(), search.begin(), ::tolower);
+        if (itemName.find(search) != std::string::npos)
+        {
+            pOutput->message_f("[$H%d$R] %s", item->Id, item->Name[0]);
+            resultCount++;
+            if (resultCount >= maxResults)
+            {
+                pOutput->message_f("Reached limit of %d results. Narrow your search.", maxResults);
+                break;
+            }
+        }
+    }
+
+    if (resultCount == 0)
+        pOutput->message_f("No items found matching '$H%s$R'.", searchTerm.c_str());
+}
+
 void Lootwhore::PrintHelpText(CommandHelp help, bool description)
 {
     pOutput->message_f("$H%s", help.command.c_str());
