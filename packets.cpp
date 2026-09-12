@@ -41,6 +41,34 @@ bool Lootwhore::HandleOutgoingPacket(uint16_t id, uint32_t size, const uint8_t* 
     UNREFERENCED_PARAMETER(injected);
     UNREFERENCED_PARAMETER(blocked);
 
+    //General packet debugger
+ /* if (!pPacket->checkOutgoingSelfInjected(id, size, data))
+    {
+        std::string debug = "";
+        char buf[8];
+        sprintf_s(buf, "0x%03X: ", id);
+        debug += buf;
+        for (int i = 0; i < min(size, 16u); i++)
+        {
+            sprintf_s(buf, "%02X ", data[i]);
+            debug += buf;
+        }
+        pOutput->message(debug);
+    }
+ */
+    //Dedicated debugger for HP
+     if (id == 0x05B)
+        {
+            std::string debug = "0x05B bytes 3-6: ";
+            char buf[8];
+            for (int i = 3; i < 7; i++)
+            {
+                sprintf_s(buf, "%02X ", data[i]);
+                debug += buf;
+            }
+            pOutput->message(debug);
+        }
+ 
     if (pPacket->checkOutgoingSelfInjected(id, size, data))
         return false;
 

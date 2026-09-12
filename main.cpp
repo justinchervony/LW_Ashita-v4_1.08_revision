@@ -168,6 +168,16 @@ void Lootwhore::InitializeCommands()
     build.help.command     = "/lw search [Required: partial item name]";
     build.help.description = "Searches item database by name and returns matching IDs. Returns up to 10 results.";
     mCommandMap.insert(std::make_pair("search", build));
+
+    build.handler          = &Lootwhore::HandleCommandAddStackIgnore;
+    build.help.command     = "/lw addstackignore [Required: item id or name]";
+    build.help.description = "Adds an item to ignore list to not follow autostack even if turned on.";
+    mCommandMap.insert(std::make_pair("addstackignore", build));
+
+    build.handler          = &Lootwhore::HandleCommandRemoveStackIgnore;
+    build.help.command     = "/lw removestackignore [Required: item id or name]";
+    build.help.description = "Removes an item from autostack ignore list.";
+    mCommandMap.insert(std::make_pair("removestackignore", build));
 }
 
 void Lootwhore::InitializeState()

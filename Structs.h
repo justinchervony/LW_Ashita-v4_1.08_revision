@@ -154,27 +154,30 @@ struct Profile_t
 {
     SmartPassSetting SmartPass;
     bool RarePass;
+    bool AutoStack;
     bool ResetOnZone;
     LotReaction DefaultReaction;
     std::map<uint16_t, LotReaction> ItemMap;
     std::list<uint16_t> AutoDrop;
     std::list<uint16_t> AutoStore;
+    std::list<uint16_t> AutoStackIgnore;
 
     Profile_t()
         : SmartPass(SmartPassSetting::Disabled)
         , RarePass(false)
+        , AutoStack(false)
         , ResetOnZone(false)
         , DefaultReaction(LotReaction::Ignore)
         , ItemMap(std::map<uint16_t, LotReaction>())
         , AutoDrop(std::list<uint16_t>())
         , AutoStore(std::list<uint16_t>())
+        , AutoStackIgnore(std::list<uint16_t>())
     {}
 };
 
 struct Settings_t
 {
     bool EnableNomadStorage;
-    bool AutoStack;
     int MaxRetry;
     int RetryDelay;
     int RandomDelayMin;
@@ -189,7 +192,6 @@ struct Settings_t
         , RandomDelayMin(0)
         , RandomDelayMax(2500)
         , EnableNomadStorage(false)
-        , AutoStack(true)
         , ForceEnableBags(std::list<int>())
         , StoreBags(std::list<int>{5, 6, 7, 8, 10, 11, 12})
         , WhiteList(std::list<string>())

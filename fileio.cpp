@@ -106,11 +106,6 @@ void Lootwhore::LoadSettings(const char* Name)
                     if (_stricmp(SubNode->value(), "enabled") == 0)
                         mSettings.EnableNomadStorage = true;
                 }
-                else if (_stricmp(SubNode->name(), "autostack") == 0)
-                {
-                    if (_stricmp(SubNode->value(), "disabled") == 0)
-                        mSettings.AutoStack = false;
-                }
                 else if (_stricmp(SubNode->name(), "retrydelay") == 0)
                 {
                     mSettings.RetryDelay = atoi(SubNode->value());
@@ -159,7 +154,7 @@ void Lootwhore::SaveSettings(const char* Name)
         outstream << *iter;
     }
     outstream << "</storebags>\n";
-    outstream << "\t\t<autostack>"  << (mSettings.AutoStack ? "enabled" : "disabled") << "</autostack>\n";
+    outstream << "\t\t<autostack>"  << (mProfile.AutoStack ? "enabled" : "disabled") << "</autostack>\n";
     outstream << "\t\t<forceenablebags></forceenablebags>\n";
     outstream << "\t\t<nomadstorage>" << (mSettings.EnableNomadStorage ? "enabled" : "disabled") << "</nomadstorage>\n";
     outstream << "\t\t<maxretry>" << mSettings.MaxRetry << "</maxretry> <!--Maximum amount of times to try lotting or passing an item if server doesn't respond to indicate packet was received. -->\n";
@@ -268,6 +263,11 @@ void Lootwhore::LoadProfile(const char* Profile)
                     if ((_stricmp(SubNode->value(), "true") == 0) || (_stricmp(SubNode->value(), "enabled") == 0))
                         mProfile.ResetOnZone = true;
                 }
+                if (_stricmp(SubNode->name(), "autostack") == 0)
+                {
+                    if ((_stricmp(SubNode->value(), "true") == 0) || (_stricmp(SubNode->value(), "enabled") == 0))
+                        mProfile.AutoStack = true;
+                }
                 if (_stricmp(SubNode->name(), "defaultaction") == 0)
                 {
                     if (_stricmp(SubNode->value(), "lot") == 0)
@@ -333,6 +333,23 @@ void Lootwhore::LoadProfile(const char* Profile)
                 }
             }
         }
+
+        else if (_stricmp(Node->name(), "stackignorelist") == 0)
+        {
+            for (xml_node<>* SubNode = Node->first_node(); SubNode; SubNode = SubNode->next_sibling())
+            {
+                if (_stricmp(SubNode->name(), "item") == 0)
+                {
+                    xml_attribute<>* idAttr = SubNode->first_attribute("id");
+                    if (idAttr == NULL)
+                        continue;
+                    auto id = atoi(idAttr->value());
+                    if ((id < 0) || (id > 65534))
+                        continue;
+                    mProfile.AutoStackIgnore.push_back((uint16_t)id);
+                }
+            }
+        }
     }
 
     mState.CurrentProfile = ProfilePath;
@@ -377,6 +394,7 @@ void Lootwhore::SaveProfile(const char* Profile, bool AppendPath)
     outstream << "</smartpass>\n";
     outstream << "\t\t<rarepass>" << (mProfile.RarePass ? "enabled" : "disabled") << "</rarepass>\n";
     outstream << "\t\t<zonereset>" << (mProfile.ResetOnZone ? "enabled" : "disabled") << "</zonereset>\n";
+    outstream << "\t\t<autostack>" << (mProfile.AutoStack ? "enabled" : "disabled") << "</autostack>\n";
     outstream << "\t</settings>\n\n";
 
     outstream << "\t<itemlist>\n";
@@ -408,6 +426,14 @@ void Lootwhore::SaveProfile(const char* Profile, bool AppendPath)
         outstream << " <!--" << m_AshitaCore->GetResourceManager()->GetItemById(*iter)->Name[0] << "-->\n";
     }
     outstream << "\t</storelist>\n\n";
+
+    outstream << "\t<stackignorelist>\n";
+    for (std::list<uint16_t>::iterator iter = mProfile.AutoStackIgnore.begin(); iter != mProfile.AutoStackIgnore.end(); iter++)
+    {
+        outstream << "\t\t<item id=\"" << *iter << "\" />";
+        outstream << " <!--" << m_AshitaCore->GetResourceManager()->GetItemById(*iter)->Name[0] << "-->\n";
+    }
+    outstream << "\t</stackignorelist>\n\n";
 
     outstream << "</lootwhore>";
     outstream.close();

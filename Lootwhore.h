@@ -95,6 +95,8 @@ public:
     void HandleCommandPass(std::vector<string> args, int argcount, CommandHelp help);
     void HandleCommandHelp(std::vector<string> args, int argcount, CommandHelp help);
     void HandleCommandSearch(std::vector<string> args, int argcount, CommandHelp help);
+    void HandleCommandAddStackIgnore(std::vector<string> args, int argcount, CommandHelp help);
+    void HandleCommandRemoveStackIgnore(std::vector<string> args, int argcount, CommandHelp help);
     void PrintHelpText(CommandHelp help, bool description);
 
     //fileio.cpp

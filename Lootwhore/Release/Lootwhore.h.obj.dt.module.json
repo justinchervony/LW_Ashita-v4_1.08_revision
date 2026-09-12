@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Lootwhore\\Release\\Lootwhore.obj",
+            "outputs": [
+                "Lootwhore\\Release\\Lootwhore.h.obj.dt.module.json",
+                "Lootwhore\\Release\\Lootwhore.h.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}

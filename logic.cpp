@@ -149,8 +149,12 @@ void Lootwhore::HandleInventory()
             continue;
         }
 
-        if ((mSettings.AutoStack) && (pItem->Count < pResource->StackSize))
+        if ((mProfile.AutoStack) && (pItem->Count < pResource->StackSize))
         {
+            // Check to ignore item for autostack
+            if (std::find(mProfile.AutoStackIgnore.begin(), mProfile.AutoStackIgnore.end(), pItem->Id) != mProfile.AutoStackIgnore.end())
+                continue;
+
             for (int y = 1; y < x; y++)
             {
                 if (comparand < mState.InventoryLocks[y])

@@ -1,0 +1,14 @@
+{
+    "version": 1,
+    "revision": 0,
+    "rules": [
+        {
+            "primary-output": "Lootwhore\\Release\\fileio.obj",
+            "outputs": [
+                "Lootwhore\\Release\\fileio.cpp.obj.dt.module.json",
+                "Lootwhore\\Release\\fileio.cpp.obj.dt.d.json"
+            ],
+            "requires": []
+        }
+    ]
+}
