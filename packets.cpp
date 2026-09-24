@@ -55,7 +55,7 @@ bool Lootwhore::HandleOutgoingPacket(uint16_t id, uint32_t size, const uint8_t* 
         }
         pOutput->message(debug);
     }
- */
+ 
     //Dedicated debugger for HP
      if (id == 0x05B)
         {
@@ -68,7 +68,7 @@ bool Lootwhore::HandleOutgoingPacket(uint16_t id, uint32_t size, const uint8_t* 
             }
             pOutput->message(debug);
         }
- 
+ */
     if (pPacket->checkOutgoingSelfInjected(id, size, data))
         return false;
 
